@@ -44,7 +44,7 @@ N.B., requiring some value of type `α` instead of being more like the `Inhabite
 
 The `UInt8Range` implementation (`LeanRanges/UInt8Range.lean`) features some subtle design decisions aimed at keeping all of the arithmetic within the `UInt8` domain. This could use well-founded recursion instead presumably. I got tired of tinkering with that and threw together this approach instead at least for an initial prototype.
 
-The approach for `UInt8Range` should generalize basically unchanged for all `UInt*` types (and `USize`). It's not obvious to me yet whether such a generalization would be cleaner as a huge macro that takes just a few parameters describing the underlying type, or whether a typeclass is more appropriate, or if a typeclass featuring many constraints on the value type (e.g., various homogeneous/heterogenous arithmetic operator constraints, decidable equality, etc etc) would be better. (Also... would the generated code be equivalent either way? Or is there a difference there worth considering for efficiency?)
+The approach for `UInt8Range` should generalize basically unchanged for all `UInt*` types (and `USize`). It's not obvious to me yet whether such a generalization would be cleaner as a huge macro that takes just a few parameters describing the underlying type, or if a typeclass featuring many constraints on the value type (e.g., various homogeneous/heterogenous arithmetic operator constraints, decidable equality, etc etc) would be better. (Also... would the generated code be equivalent either way? Or is there a difference there worth considering for efficiency?)
 
 ## A `Range` typeclass?
 
